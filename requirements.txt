@@ -1,13 +1,35 @@
-vllm==0.10.0
-transformers
-datasets
-sentencepiece
+# ---------- Build tools (must come first) ----------
+setuptools==79.0.0
+pip>=24.0
+wheel>=0.43
+
+# ---------- Core numeric stack ----------
+numpy>=1.26,<2.2
+
+# ---------- PyTorch (GPU-compatible Colab set) ----------
+torch==2.7.1
+torchvision==0.22.1
+torchaudio==2.7.1
+
+# ---------- HuggingFace stack (PINNED — critical) ----------
+transformers==4.56.2
 accelerate==0.34.2
-einops
-tensorboardX
-absl-py
-h5py
-lm_eval
-flash-attn
-triton
-wandb
+datasets==2.21.0
+huggingface_hub==0.34.4
+sentencepiece==0.2.0
+
+# ---------- Evaluation ----------
+lm-eval==0.4.2
+
+# ---------- Inference ----------
+vllm==0.10.0
+
+# ---------- Utilities ----------
+einops==0.8.0
+tensorboardX==2.6.2
+absl-py==2.1.0
+h5py==3.11.0
+wandb==0.17.6
+
+# ---------- Notebook stability ----------
+jedi>=0.16
